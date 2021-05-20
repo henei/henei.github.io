@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>从编码技巧与规范开始 | Chen&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/img/profile.png">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.23b7c006.css" as="style"><link rel="preload" href="/assets/js/app.94d98655.js" as="script"><link rel="preload" href="/assets/js/2.981d4174.js" as="script"><link rel="preload" href="/assets/js/19.7e6a7102.js" as="script"><link rel="prefetch" href="/assets/js/10.241d0ae0.js"><link rel="prefetch" href="/assets/js/11.d457cd72.js"><link rel="prefetch" href="/assets/js/12.a71ebe50.js"><link rel="prefetch" href="/assets/js/13.21b061f7.js"><link rel="prefetch" href="/assets/js/14.da55ecb1.js"><link rel="prefetch" href="/assets/js/15.8454ba16.js"><link rel="prefetch" href="/assets/js/16.4b22ccb7.js"><link rel="prefetch" href="/assets/js/17.7eed99bd.js"><link rel="prefetch" href="/assets/js/18.48906ae2.js"><link rel="prefetch" href="/assets/js/20.b9e7face.js"><link rel="prefetch" href="/assets/js/21.1c8fee8d.js"><link rel="prefetch" href="/assets/js/22.29304177.js"><link rel="prefetch" href="/assets/js/23.8c1cedef.js"><link rel="prefetch" href="/assets/js/24.43a407f4.js"><link rel="prefetch" href="/assets/js/3.6d8e98ba.js"><link rel="prefetch" href="/assets/js/4.a40f774e.js"><link rel="prefetch" href="/assets/js/5.b7462bd8.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/7.dc078c9b.js"><link rel="prefetch" href="/assets/js/8.c1b4ebd3.js"><link rel="prefetch" href="/assets/js/9.cce11f93.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23b7c006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/profile.png" alt="Chen's blog" class="logo"> <span class="site-name can-hide">Chen's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuebase/" class="nav-link router-link-active">
+  Vue基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="链接" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="链接" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuebase/" class="nav-link router-link-active">
+  Vue基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="链接" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="链接" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuebase/" aria-current="page" class="sidebar-link">Vue CLI 3 项目构建基础</a></li><li><a href="/vuebase/build1.html" class="sidebar-link">包管理工具与配置项</a></li><li><a href="/vuebase/build2.html" class="sidebar-link">webpack 在 CLI 3 中的应用</a></li><li><a href="/vuebase/build3.html" class="sidebar-link">env 文件与环境设置</a></li><li><a href="/vuebase/combat1.html" class="sidebar-link">单页应用的基本配置</a></li><li><a href="/vuebase/combat2.html" class="sidebar-link">使用 pages 构建多页应用</a></li><li><a href="/vuebase/combat3.html" class="sidebar-link">多页路由与模板解析</a></li><li><a href="/vuebase/combat4.html" class="sidebar-link">项目整合与优化</a></li><li><a href="/vuebase/expand1.html" class="sidebar-link">扩充你的开发工具</a></li><li><a href="/vuebase/expand2.html" class="sidebar-link">将 UI 界面交给第三方库</a></li><li><a href="/vuebase/expand3.html" class="sidebar-link">尝试使用外部数据</a></li><li><a href="/vuebase/guide1.html" aria-current="page" class="active sidebar-link">从编码技巧与规范开始</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuebase/guide1.html#实例" class="sidebar-link">实例</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide1.html#结语" class="sidebar-link">结语</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide1.html#思考-作业" class="sidebar-link">思考 &amp; 作业</a></li></ul></li><li><a href="/vuebase/guide2.html" class="sidebar-link">编写可复用性模块</a></li><li><a href="/vuebase/guide3.html" class="sidebar-link">合理划分容器组件与展示组件</a></li><li><a href="/vuebase/guide4.html" class="sidebar-link">数据驱动与拼图游戏</a></li><li><a href="/vuebase/guide5.html" class="sidebar-link">Vue API 盲点解析</a></li><li><a href="/vuebase/summary.html" class="sidebar-link">总结</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="从编码技巧与规范开始"><a href="#从编码技巧与规范开始" class="header-anchor">#</a> 从编码技巧与规范开始</h1> <p>当我们完成项目的构建，进入开发阶段的时候，除了你需要了解框架本身的知识点外，我们还需要提前掌握一些项目的编码技巧与规范，在根源上解决之后因编码缺陷而导致的项目维护困难、性能下降等常见问题，为项目多人开发提供编码的一致性。</p> <p>本文将罗列项目中常用的一些编码技巧与规范来帮助大家提升代码质量，并会结合代码片段加强大家的理解与认知。当然不是所有实例都是针对 Vue.js 开发的，有些同样也适用于其他前端项目。</p> <h2 id="实例"><a href="#实例" class="header-anchor">#</a> 实例</h2> <h3 id="_1-使用对象代替-if-及-switch"><a href="#_1-使用对象代替-if-及-switch" class="header-anchor">#</a> 1. 使用对象代替 if 及 switch</h3> <p>在很多情况下，我们经常会遇到循环判断执行赋值操作的场景，一般我们都会使用 if 及 switch 的条件判断，如果符合则执行赋值，不符合则进入下个判断，比如：</p> <div class="language- extra-class"><pre class="language-text"><code>let name = 'lisi';
+let age = 18;
+
+if (name === 'zhangsan') {
+    age = 21;
+} else if (name === 'lisi') {
+    age = 18;
+} else if (name === 'wangwu') {
+    age = 12;
+}
+
+// 或者
+switch(name) {
+    case 'zhangsan':
+        age = 21;
+        break
+    case 'lisi':
+        age = 18;
+        break
+    case 'wangwu':
+        age = 12;
+        break
+}
+
+</code></pre></div><p>这样的写法不仅冗余，而且代码执行效率不高，我们可以使用对象的形式简写：</p> <div class="language- extra-class"><pre class="language-text"><code>let name = 'lisi';
+let obj = {
+    zhangsan: 21,
+    lisi: 18,
+    wangwu: 12
+};
+
+let age = obj[name] || 18;
+
+</code></pre></div><p>以上这种技巧适用于循环判断一次赋值的情况，如果判断过后有较多处理逻辑的还需要使用 if 或 switch 等方法。</p> <h3 id="_2-使用-array-from-快速生成数组"><a href="#_2-使用-array-from-快速生成数组" class="header-anchor">#</a> 2. 使用 Array.from 快速生成数组</h3> <p>一般我们生成一个有规律的数组会使用循环插入的方法，比如使用时间选择插件时，我们可能需要将小时数存放在数组中：</p> <div class="language- extra-class"><pre class="language-text"><code>let hours = [];
+
+for (let i = 0; i &lt; 24; i++) {
+    hours.push(i + '时');
+}
+
+</code></pre></div><p>如果使用 Array.from 我们可以简写为：</p> <div class="language- extra-class"><pre class="language-text"><code>let hours = Array.from({ length: 24 }, (value, index) =&gt; index + '时');
+
+</code></pre></div><h3 id="_3-使用-router-beforeeach-来处理跳转前逻辑"><a href="#_3-使用-router-beforeeach-来处理跳转前逻辑" class="header-anchor">#</a> 3. 使用 router.beforeEach 来处理跳转前逻辑</h3> <p>在某些情况下，我们需要在路由跳转前处理一些特定的业务逻辑，比如修改路由跳转、设置 title 等，代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
+
+// 首页
+const Home = (resolve =&gt; {
+    require.ensure(['../views/home.vue'], () =&gt; {
+        resolve(require('../views/home.vue'))
+    })
+})
+
+let base = `${process.env.BASE_URL}`;
+
+let router =  new Router({
+    mode: 'history',
+    base: base,
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home,
+            meta: { title: '首页' }
+        },
+    ]
+})
+
+router.beforeEach((to, from, next) =&gt; {
+    let title = to.meta &amp;&amp; to.meta.title;
+    
+    if (title) {
+        document.title = title; // 设置页面 title
+    }
+    
+    if (to.name === 'home') {
+    
+        // 拦截并跳转至 page2 单页，$openRouter 方法在第 5 节中封装
+        Vue.$openRouter({
+            name: 'page2'
+        });
+    }
+    
+    next();
+})
+
+export default router
+
+</code></pre></div><p>注意最后需要调用 <code>next()</code> 方法执行路由跳转。</p> <h3 id="_4-使用-v-if-来优化页面加载"><a href="#_4-使用-v-if-来优化页面加载" class="header-anchor">#</a> 4. 使用 v-if 来优化页面加载</h3> <p>在 Vue 页面中，一些模块可能需要用户主动触发才会显示，比如弹框组件等这样的子组件，那么我们可以使用 <code>v-if</code> 来进行按需渲染，没必要一进页面就渲染所有模块。比如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;div @click=&quot;showModuleB = true&quot;&gt;&lt;/div&gt;
+    &lt;module-b v-if=&quot;isShowModuleB&quot;&gt;&lt;/module-b&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import moduleB from 'components/moduleB'
+export default {
+    data() {
+        return {
+            isShowModuleB: false
+        }  
+    },
+    components: {
+        moduleB
+    }
+}
+&lt;/script&gt;
+
+</code></pre></div><p>这样当 isShowModuleB 为 false 的时候便不会加载该模块下的代码，包括一些耗时的接口调用。当然 v-if 主要适用于代码量较多、用户点击不是很频繁的模块的显示隐藏，同时如果涉及到权限问题的代码都需要使用 v-if，而不是 v-show。</p> <h3 id="_5-路由跳转尽量使用-name-而不是-path"><a href="#_5-路由跳转尽量使用-name-而不是-path" class="header-anchor">#</a> 5. 路由跳转尽量使用 name 而不是 path</h3> <p>我们前期配置的路由路径后期难免会进行修改，如果我们页面跳转的地方全是使用的 <code>path</code>，那么我们需要修改所有涉及该 path 的页面，这样不利于项目的维护。而相对于 path，name 使用起来就方便多了，因为其具有唯一性，即使我们修改了 path，还可以使用原来的 <code>name</code> 值进行跳转。</p> <div class="language- extra-class"><pre class="language-text"><code>this.$router.push({ 
+    name: 'page1'
+});
+
+// 而不是
+this.$router.push({ 
+    path: 'page1'
+});
+
+</code></pre></div><h3 id="_6-使用-key-来优化-v-for-循环"><a href="#_6-使用-key-来优化-v-for-循环" class="header-anchor">#</a> 6. 使用 key 来优化 v-for 循环</h3> <p><code>v-for</code> 是 Vue 提供的基于源数据多次渲染元素或模板块的指令。正因为是数据驱动，所以在修改列表数据的时候，Vue 内部会根据 key 值去判断某个值是否被修改，其会重新渲染修改后的值，否则复用之前的元素。</p> <p>这里如果数据中存在唯一表示 id，则推荐使用 id 作为 key，如果没有则可以使用数组的下标 index 作为 key。因为如果在数组中间插入值，其之后的 index 会发生改变，即使数据没变 Vue 也会进行重新渲染，所以最好的办法是使用数组中不会变化且唯一的那一项作为 key 值。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;ul&gt;
+        &lt;li v-for=&quot;(item, index) in arr&quot; :key=&quot;item.id&quot;&gt;{{ item.data }}&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+    data() {
+        return {
+            arr: [
+                {
+                    id: 1,
+                    data: 'a'
+                },
+                {
+                    id: 2,
+                    data: 'b'
+                },
+                {
+                    id: 3,
+                    data: 'c'
+                }
+            ]
+        }
+    }
+}
+&lt;/script&gt;
+
+</code></pre></div><h3 id="_7-使用-computed-代替-watch"><a href="#_7-使用-computed-代替-watch" class="header-anchor">#</a> 7. 使用 computed 代替 watch</h3> <p>很多时候页面会出现 <code>watch</code> 的滥用而导致一系列问题的产生，而通常更好的办法是使用 <code>computed</code> 属性，首先需要区别它们有什么区别：</p> <ul><li>watch：当监测的属性变化时会自动执行对应的回调函数</li> <li>computed：计算的属性只有在它的相关依赖发生改变时才会重新求值</li></ul> <p>其实它们在功能上还是有所区别的，但是有时候可以实现同样的效果，而 computed 会更胜一筹，比如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;firstName&quot;&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;lastName&quot;&gt;
+        &lt;span&gt;{{ fullName }}&lt;/span&gt;
+        &lt;span&gt;{{ fullName2 }}&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+    data() {
+        reurn {
+            firstName: '',
+            lastName: '',
+            fullName2: ''
+        }
+    },
+    
+    // 使用 computed
+    computed: {
+        fullName() {
+            return this.firstName + ' ' + this.lastName
+        }
+    },
+    
+    // 使用 watch
+    watch: {
+        firstName: function(newVal, oldVal) {
+            this.fullName2 = newVal + ' ' + this.lastName;
+        },
+        lastName: function(newVal, oldVal) {
+            this.fullName2 = this.firstName + ' ' + newVal;
+        },
+    }
+}
+&lt;/script&gt;
+
+</code></pre></div><p>上方我们通过对比可以看到，在处理多数据联动的情况下，使用 computed 会更加合理一点。</p> <p><img src="https://user-gold-cdn.xitu.io/2018/11/1/166cafdda21ccc5b?w=630&amp;h=245&amp;f=jpeg&amp;s=22707" alt=""></p> <p>computed 监测的是依赖值，依赖值不变的情况下其会直接读取缓存进行复用，变化的情况下才会重新计算；而 watch 监测的是属性值， 只要属性值发生变化，其都会触发执行回调函数来执行一系列操作。</p> <h3 id="_8-统一管理缓存变量"><a href="#_8-统一管理缓存变量" class="header-anchor">#</a> 8. 统一管理缓存变量</h3> <p>在项目中或多或少会使用浏览器缓存，比如 sessionStorage 和 localStorage，当一个项目中存在很多这样的缓存存取情况的时候就会变得难以维护和管理，因为其就像全局变量一样散落在项目的各个地方，这时候我们应该将这些变量统一管理起来，放到一个或多个文件中去，比如：</p> <div class="language- extra-class"><pre class="language-text"><code>/* types.js */
+
+export const USER_NAME = 'userName';
+export const TOKEN = 'token';
+
+</code></pre></div><p>在需要存取的时候，直接引用：</p> <div class="language- extra-class"><pre class="language-text"><code>import { USER_NAME, TOKEN } from '../types.js'
+
+sessionStorage[USER_NAME] = '张三';
+localStorage[TOKEN] = 'xxx';
+
+</code></pre></div><p>使用这种方法的好处在于一旦我们需要修改变量名，直接修改管理文件中的值即可，无需修改使用它的页面，同时这也可以避免命名冲突等问题的出现，这类似于 vuex 中 mutations 变量的管理。</p> <h3 id="_9-使用-settimeout-代替-setinterval"><a href="#_9-使用-settimeout-代替-setinterval" class="header-anchor">#</a> 9. 使用 setTimeout 代替 setInterval</h3> <p>一般情况下我们在项目里不建议使用 <code>setInterval</code>，因为其会存在代码的执行间隔比预期小以及 “丢帧” 的现象，原因在于其本身的实现逻辑。很多人会认为 setInterval 中第二个时间参数的作用是经过该毫秒数执行回调方法，其实不然，其真正的作用是<strong>经过该毫秒数将回调方法放置到队列中去</strong>，但是如果队列中存在正在执行的方法，其会等待之前的方法完毕再执行，如果存在还未执行的代码实例，其不会插入到队列中去，也就产生了 “丢帧”。</p> <p>而 setTimeout 并不会出现这样的现象，因为每一次调用都会产生了一个新定时器，同时在前一个定时器代码执行完之前，不会向队列插入新的定时器代码。</p> <div class="language- extra-class"><pre class="language-text"><code>// 该定时器实际会在 3s 后立即触发下一次回调
+setInterval(() =&gt; {
+    // 执行完这里的代码需要 2s
+}, 1000);
+
+// 使用 setTimeout 改写，4秒后触发下一次回调
+let doSometing = () =&gt; {
+    // 执行完这里的代码需要 2s
+    
+    setTimeout(doSometing, 1000);
+}
+
+doSometing();
+
+</code></pre></div><p>延伸阅读：<a href="https://segmentfault.com/a/1190000011282175" target="_blank" rel="noopener noreferrer">对于“不用setInterval，用setTimeout”的理解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="_10-不要使用-for-in-循环来遍历数组"><a href="#_10-不要使用-for-in-循环来遍历数组" class="header-anchor">#</a> 10. 不要使用 for in 循环来遍历数组</h3> <p>大家应该都知道 <code>for in</code> 循环是用于遍历对象的，但它可以用来遍历数组吗？答案是可以的，因为数组在某种意义上也是对象，但是如果用其遍历数组会存在一些隐患：其会遍历数组原型链上的属性。</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2];
+
+for (let key in arr) {
+    console.log(arr[key]); // 会正常打印 1, 2
+}
+
+// 但是如果在 Array 原型链上添加一个方法
+Array.prototype.test = function() {};
+
+for (let key in arr) {
+    console.log(arr[key]); // 此时会打印 1, 2, ƒ () {}
+}
+
+</code></pre></div><p>因为我们不能保证项目代码中不会对数组原型链进行操作，也不能保证引入的第三方库不对其进行操作，所以不要使用 for in 循环来遍历数组。</p> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>本文罗列了 10 个项目开发中常见的编码技巧与规范，其实技巧和规范之间本身就是相辅相成的，所以没有分别进行罗列。当然实际的项目开发中存在着很多这样的例子需要大家自己去归纳和整理，比如使用 <code>name</code> 来命名你的组件等。如果你有不错的点子，也可以分享在下方的评论区域中供大家学习。</p> <p>拓展阅读：<a href="https://github.com/ecomfe/spec" target="_blank" rel="noopener noreferrer">前端各类规范集合<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="思考-作业"><a href="#思考-作业" class="header-anchor">#</a> 思考 &amp; 作业</h2> <ul><li><p>可以使用哪些技巧来实现数组的循环遍历、去重等？</p></li> <li><p>在 Vue 项目中如何使用 <code>ESLint</code> 来规范 JS 代码的编写？</p></li> <li><p>.vue 单文件组件中如何进行代码的格式化？</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuebase/expand3.html" class="prev">
+        尝试使用外部数据
+      </a></span> <span class="next"><a href="/vuebase/guide2.html">
+        编写可复用性模块
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.94d98655.js" defer></script><script src="/assets/js/2.981d4174.js" defer></script><script src="/assets/js/19.7e6a7102.js" defer></script>
+  </body>
+</html>

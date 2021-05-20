@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>编写可复用性模块 | Chen&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/img/profile.png">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.23b7c006.css" as="style"><link rel="preload" href="/assets/js/app.94d98655.js" as="script"><link rel="preload" href="/assets/js/2.981d4174.js" as="script"><link rel="preload" href="/assets/js/20.b9e7face.js" as="script"><link rel="prefetch" href="/assets/js/10.241d0ae0.js"><link rel="prefetch" href="/assets/js/11.d457cd72.js"><link rel="prefetch" href="/assets/js/12.a71ebe50.js"><link rel="prefetch" href="/assets/js/13.21b061f7.js"><link rel="prefetch" href="/assets/js/14.da55ecb1.js"><link rel="prefetch" href="/assets/js/15.8454ba16.js"><link rel="prefetch" href="/assets/js/16.4b22ccb7.js"><link rel="prefetch" href="/assets/js/17.7eed99bd.js"><link rel="prefetch" href="/assets/js/18.48906ae2.js"><link rel="prefetch" href="/assets/js/19.7e6a7102.js"><link rel="prefetch" href="/assets/js/21.1c8fee8d.js"><link rel="prefetch" href="/assets/js/22.29304177.js"><link rel="prefetch" href="/assets/js/23.8c1cedef.js"><link rel="prefetch" href="/assets/js/24.43a407f4.js"><link rel="prefetch" href="/assets/js/3.6d8e98ba.js"><link rel="prefetch" href="/assets/js/4.a40f774e.js"><link rel="prefetch" href="/assets/js/5.b7462bd8.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/7.dc078c9b.js"><link rel="prefetch" href="/assets/js/8.c1b4ebd3.js"><link rel="prefetch" href="/assets/js/9.cce11f93.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23b7c006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/profile.png" alt="Chen's blog" class="logo"> <span class="site-name can-hide">Chen's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuebase/" class="nav-link router-link-active">
+  Vue基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="链接" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="链接" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuebase/" class="nav-link router-link-active">
+  Vue基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="链接" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="链接" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuebase/" aria-current="page" class="sidebar-link">Vue CLI 3 项目构建基础</a></li><li><a href="/vuebase/build1.html" class="sidebar-link">包管理工具与配置项</a></li><li><a href="/vuebase/build2.html" class="sidebar-link">webpack 在 CLI 3 中的应用</a></li><li><a href="/vuebase/build3.html" class="sidebar-link">env 文件与环境设置</a></li><li><a href="/vuebase/combat1.html" class="sidebar-link">单页应用的基本配置</a></li><li><a href="/vuebase/combat2.html" class="sidebar-link">使用 pages 构建多页应用</a></li><li><a href="/vuebase/combat3.html" class="sidebar-link">多页路由与模板解析</a></li><li><a href="/vuebase/combat4.html" class="sidebar-link">项目整合与优化</a></li><li><a href="/vuebase/expand1.html" class="sidebar-link">扩充你的开发工具</a></li><li><a href="/vuebase/expand2.html" class="sidebar-link">将 UI 界面交给第三方库</a></li><li><a href="/vuebase/expand3.html" class="sidebar-link">尝试使用外部数据</a></li><li><a href="/vuebase/guide1.html" class="sidebar-link">从编码技巧与规范开始</a></li><li><a href="/vuebase/guide2.html" aria-current="page" class="active sidebar-link">编写可复用性模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuebase/guide2.html#一个简单的例子" class="sidebar-link">一个简单的例子</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide2.html#封装成一个函数" class="sidebar-link">封装成一个函数</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide2.html#封装成一个组件" class="sidebar-link">封装成一个组件</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide2.html#封装成一个插件" class="sidebar-link">封装成一个插件</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide2.html#结语" class="sidebar-link">结语</a></li><li class="sidebar-sub-header"><a href="/vuebase/guide2.html#思考-作业" class="sidebar-link">思考 &amp; 作业</a></li></ul></li><li><a href="/vuebase/guide3.html" class="sidebar-link">合理划分容器组件与展示组件</a></li><li><a href="/vuebase/guide4.html" class="sidebar-link">数据驱动与拼图游戏</a></li><li><a href="/vuebase/guide5.html" class="sidebar-link">Vue API 盲点解析</a></li><li><a href="/vuebase/summary.html" class="sidebar-link">总结</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="编写可复用性模块"><a href="#编写可复用性模块" class="header-anchor">#</a> 编写可复用性模块</h1> <p>在生活中，重复的机械劳动会消耗我们的时间和精力，提高生产成本，降低工作效率。同样，在代码世界中，编写重复的代码会导致代码的冗余，页面性能的下降以及后期维护成本的增加。由此可见将重复的事情复用起来是提高生产效率、降低维护成本的不二之选。</p> <p>在 Vue 项目中，每一个页面都可以看作是由大大小小的模块构成的，即便是一行代码、一个函数、一个组件都可以看作是一个个自由的模块。那么提高代码的复用性的关键便在于编写可复用的模块，也就是编写可复用的代码、函数和组件等。</p> <h2 id="一个简单的例子"><a href="#一个简单的例子" class="header-anchor">#</a> 一个简单的例子</h2> <div class="language- extra-class"><pre class="language-text"><code>let person = [];
+
+for (let i = 0; i &lt; data.obj.items.length; i++) {
+    person.push({
+        name: data.obj.items[i].name,
+        age: data.obj.items[i].age
+    });
+}
+
+</code></pre></div><p>不知道上方代码给你的第一印象是什么？总之给我的印象是糟糕的，因为出现了重复性的代码片段 <code>data.obj.items</code>，可能这样的代码在我们团队开发中随处可见，这也说明了重复编码现象其实无处不在。</p> <p>面对自己编写的代码，我们应该保持一颗去重的心，发现重复的地方就相当于找到了可以复用的模块。在不复用的情况下，上述代码一旦需要修改变量 <code>items</code> 为 <code>lists</code>，那么我们就得修改 3 处地方，不知不觉就增加了维护成本。而到时候往往修改你代码的人并不是你自己，所以对自己好点，对他人也会好点。复用后的代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>let person = [];
+let values = data.obj.items;
+
+for (let i = 0; i &lt; values.length; i++) {
+    person.push({
+        name: values[i].name,
+        age: values[i].age
+    });
+}
+
+</code></pre></div><p>我们通过将 data.obj.items 的值赋值给变量 values 来实现了复用，此时修改 <code>items</code> 为 <code>lists</code> 的话我们只需修改一处地方即可，不管是维护成本还是代码可读性上，复用的优势都显而易见。</p> <h2 id="封装成一个函数"><a href="#封装成一个函数" class="header-anchor">#</a> 封装成一个函数</h2> <p>除了使用变量的赋值缓存使用来解决数据的重复读取外，我们在开发过程中重复性更多的也许是功能点的重复，比如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;tempalte&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;str1&quot;&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;str2&quot;&gt;
+        &lt;div&gt;{{ str1.slice(1).toUpperCase() }}&lt;/div&gt;
+        &lt;div&gt;{{ str2.slice(1).toUpperCase() }}&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+</code></pre></div><p>上述代码的重复功能点在于截取输入框中第二个字符开始到最后的值并把它们转化成大写字母，像这样很简单的操作虽然重复使用也不会出现太大的问题，但是如果是代码量较多的操作呢？重复书写相同功能的代码是一种不经过大脑思考的行为，我们需要对其进行优化，这里我们可以把功能点封装成一个函数：</p> <div class="language- extra-class"><pre class="language-text"><code>export default {
+    methods: {
+        sliceUpperCase(val) {
+            return val.slice(1).toUpperCase()
+        }
+    }
+}
+
+</code></pre></div><p>如此我们只要在用到该方法的地方调用即可，将值传入其中并返回新值。当然像在双花括号插值和 v-bind 表达式中重复的功能点我们可以封装成过滤器比较合适：</p> <div class="language- extra-class"><pre class="language-text"><code>// 单文件组件注册过滤器
+filters: {
+    sliceUpperCase(val) {
+        return val.slice(1).toUpperCase()
+    }
+}
+
+// 全局注册过滤器
+Vue.filter('sliceUpperCase', function (val) {
+    return val.slice(1).toUpperCase()
+})
+
+</code></pre></div><p>然后在 html 中使用“管道”符进行过滤：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;{{ str1 | toUpperCase }}&lt;/div&gt;
+&lt;div&gt;{{ str2 | toUpperCase }}&lt;/div&gt;
+
+</code></pre></div><p>这样我们就把重复的功能性代码封装成了函数，而不管是过滤器还是正常的方法封装，其本质都是函数的封装。</p> <h2 id="封装成一个组件"><a href="#封装成一个组件" class="header-anchor">#</a> 封装成一个组件</h2> <p>相比较于函数的封装，规模更大一点的便是组件的封装，组件包含了模板、脚本以及样式的代码，在实际开发中组件的使用频率也是非常大的，我们项目中的每一个页面其实都可以看作是一个父组件，其可以包含很多子组件，子组件通过接收父组件的值来渲染页面，父组件通过响应子组件的回调来触发事件。</p> <p>封装一个组件主要包含两种方式，一种是最常见的整体封装，用户通过改变数据源来呈现不同的页面状态，代码结构不可定制化。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+    &lt;my-component data=&quot;我是父组件传入子组件的数据&quot;&gt;&lt;/my-component&gt;
+&lt;/div&gt;
+
+</code></pre></div><p>另一种便是自定义封装，也就是插槽(slot)，我们可以开放一部分槽位给父组件，使其能够进行一定程度的定制化，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+    &lt;my-component data=&quot;我是父组件传入子组件的数据&quot;&gt;
+        &lt;template slot=&quot;customize&quot;&gt;
+            &lt;span&gt;这是定制化的数据&lt;/span&gt;
+        &lt;/template&gt;
+    &lt;/my-component&gt;
+&lt;/div&gt;
+
+</code></pre></div><p>在 myComponent 组件中我们便可以接收对应的 slot：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;span&gt;{{ data }}&lt;/span&gt;
+    &lt;slot name=&quot;customize&quot;&gt;&lt;/slot&gt;
+&lt;div&gt;
+
+</code></pre></div><p>这里我们通过定义 slot 标签的 name 值为 customize 来接收父组件在使用该组件时在 template 标签上定义的 slot=&quot;customize&quot; 中的代码，不同父组件可以定制不同的 slot 代码来实现差异化的插槽。最终渲染出来的代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;span&gt;我是父组件传入子组件的数据&lt;/span&gt;
+        &lt;span&gt;这是定制化的数据&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre></div><p>这样我们就完成了一个小型组件的封装，将共用代码封装到组件中去，页面需要引入的时候直接使用 import 并进行相应注册即可，当然你也可以进行全局的引入：</p> <div class="language- extra-class"><pre class="language-text"><code>import myComponent from '../myComponent.vue'
+
+// 全局
+Vue.component('my-component', myComponent)
+
+</code></pre></div><h2 id="封装成一个插件"><a href="#封装成一个插件" class="header-anchor">#</a> 封装成一个插件</h2> <p>在某些情况下，我们封装的内容可能不需要使用者对其内部代码结构进行了解，其只需要熟悉我们提供出来的相应方法和 api 即可，这需要我们更系统性的将公用部分逻辑封装成插件，来为项目添加全局功能，比如常见的 loading 功能、弹框功能等。</p> <p>Vue 提供给了我们一个 install 方法来编写插件，使用该方法中的第一个 Vue 构造器参数可以为项目添加全局方法、资源、选项等。比如我们可以给组件添加一个简单的全局调用方法来实现插件的编写：</p> <div class="language- extra-class"><pre class="language-text"><code>/* toast.js */
+import ToastComponent from './toast.vue' // 引入组件
+
+let $vm
+
+export default {    
+    install(Vue, options) {
+        
+        // 判断实例是否存在
+        if (!$vm) {            
+            const ToastPlugin = Vue.extend(ToastComponent); // 创建一个“扩展实例构造器”
+            
+            // 创建 $vm 实例
+            $vm = new ToastPlugin({                
+                el: document.createElement('div')  // 声明挂载元素          
+            });            
+            
+            document.body.appendChild($vm.$el); // 把 toast 组件的 DOM 添加到 body 里
+        } 
+        
+        // 给 toast 设置自定义文案和时间
+        let toast = (text, duration) =&gt; {
+            $vm.text = text;
+            $vm.duration = duration;
+            
+            // 在指定 duration 之后让 toast 消失
+            setTimeout(() =&gt; {
+                $vm.isShow = false;  
+            }, $vm.duration);
+        }
+        
+        // 判断 Vue.$toast 是否存在
+        if (!Vue.$toast) {            
+            Vue.$toast = toast;        
+        }        
+        
+        Vue.prototype.$toast = Vue.$toast; // 全局添加 $toast 事件
+    }
+}
+
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2018/11/1/166cb0b518f4c53c?w=855&amp;h=285&amp;f=jpeg&amp;s=28471" alt=""></p> <p>成功编写完插件的 JS 脚本后，我们在入口文件中需要通过 Vue.use() 来注册一下该插件：</p> <div class="language- extra-class"><pre class="language-text"><code>import Toast from '@/widgets/toast/toast.js'
+
+Vue.use(Toast); // 注册 Toast
+
+</code></pre></div><p>最后我们在需要调用它的地方直接传入配置项使用即可，比如：</p> <div class="language- extra-class"><pre class="language-text"><code>this.$toast('Hello World', 2000);
+
+</code></pre></div><p>当然你也可以不使用 install 方法来编写插件，直接采用导出一个封装好的实例方法并将其挂载到 Vue 的原型链上来实现相同的功能。</p> <p>更详细的编写插件和实例的方法可以参考我之前写的一篇文章：<a href="https://mp.weixin.qq.com/s/Aqgh7Dkialhm9v8U0wBuqg" target="_blank" rel="noopener noreferrer">Vue 插件编写与实战<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>本文讲解了编写可复用性模块的常见方法，通过出现了重复代码 -&gt; 封装成一个变量 -&gt; 封装成一个函数 -&gt; 封装成一个组件 -&gt; 封装成一个插件，一步步将重复代码进行分析和复用。而与重复代码做斗争是一个持久性的过程，我们需要时刻保持一种“强迫症”的心态去整理复用项目中的重复代码，做好编码的严谨和自律。</p> <h2 id="思考-作业"><a href="#思考-作业" class="header-anchor">#</a> 思考 &amp; 作业</h2> <ul><li><p>在 Vue 中如何添加全局自定义指令？</p></li> <li><p>在 vue 路由切换时如何全局隐藏某个插件？比如文中的 toast</p></li> <li><p>如何实现一个表单验证插件？需要运用到哪些知识？</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuebase/guide1.html" class="prev">
+        从编码技巧与规范开始
+      </a></span> <span class="next"><a href="/vuebase/guide3.html">
+        合理划分容器组件与展示组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.94d98655.js" defer></script><script src="/assets/js/2.981d4174.js" defer></script><script src="/assets/js/20.b9e7face.js" defer></script>
+  </body>
+</html>

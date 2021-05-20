@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目整合与优化 | Chen&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/img/profile.png">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.23b7c006.css" as="style"><link rel="preload" href="/assets/js/app.94d98655.js" as="script"><link rel="preload" href="/assets/js/2.981d4174.js" as="script"><link rel="preload" href="/assets/js/15.8454ba16.js" as="script"><link rel="prefetch" href="/assets/js/10.241d0ae0.js"><link rel="prefetch" href="/assets/js/11.d457cd72.js"><link rel="prefetch" href="/assets/js/12.a71ebe50.js"><link rel="prefetch" href="/assets/js/13.21b061f7.js"><link rel="prefetch" href="/assets/js/14.da55ecb1.js"><link rel="prefetch" href="/assets/js/16.4b22ccb7.js"><link rel="prefetch" href="/assets/js/17.7eed99bd.js"><link rel="prefetch" href="/assets/js/18.48906ae2.js"><link rel="prefetch" href="/assets/js/19.7e6a7102.js"><link rel="prefetch" href="/assets/js/20.b9e7face.js"><link rel="prefetch" href="/assets/js/21.1c8fee8d.js"><link rel="prefetch" href="/assets/js/22.29304177.js"><link rel="prefetch" href="/assets/js/23.8c1cedef.js"><link rel="prefetch" href="/assets/js/24.43a407f4.js"><link rel="prefetch" href="/assets/js/3.6d8e98ba.js"><link rel="prefetch" href="/assets/js/4.a40f774e.js"><link rel="prefetch" href="/assets/js/5.b7462bd8.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/7.dc078c9b.js"><link rel="prefetch" href="/assets/js/8.c1b4ebd3.js"><link rel="prefetch" href="/assets/js/9.cce11f93.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23b7c006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/profile.png" alt="Chen's blog" class="logo"> <span class="site-name can-hide">Chen's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuebase/" class="nav-link router-link-active">
+  Vue基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="链接" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="链接" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vuebase/" class="nav-link router-link-active">
+  Vue基础
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="链接" class="dropdown-title"><span class="title">链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="链接" class="mobile-dropdown-title"><span class="title">链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  码云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vuebase/" aria-current="page" class="sidebar-link">Vue CLI 3 项目构建基础</a></li><li><a href="/vuebase/build1.html" class="sidebar-link">包管理工具与配置项</a></li><li><a href="/vuebase/build2.html" class="sidebar-link">webpack 在 CLI 3 中的应用</a></li><li><a href="/vuebase/build3.html" class="sidebar-link">env 文件与环境设置</a></li><li><a href="/vuebase/combat1.html" class="sidebar-link">单页应用的基本配置</a></li><li><a href="/vuebase/combat2.html" class="sidebar-link">使用 pages 构建多页应用</a></li><li><a href="/vuebase/combat3.html" class="sidebar-link">多页路由与模板解析</a></li><li><a href="/vuebase/combat4.html" aria-current="page" class="active sidebar-link">项目整合与优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuebase/combat4.html#使用-alias-简化路径" class="sidebar-link">使用 alias 简化路径</a></li><li class="sidebar-sub-header"><a href="/vuebase/combat4.html#整合功能模块" class="sidebar-link">整合功能模块</a></li><li class="sidebar-sub-header"><a href="/vuebase/combat4.html#开启-gzip-压缩" class="sidebar-link">开启 Gzip 压缩</a></li><li class="sidebar-sub-header"><a href="/vuebase/combat4.html#结语" class="sidebar-link">结语</a></li><li class="sidebar-sub-header"><a href="/vuebase/combat4.html#思考-作业" class="sidebar-link">思考 &amp; 作业</a></li></ul></li><li><a href="/vuebase/expand1.html" class="sidebar-link">扩充你的开发工具</a></li><li><a href="/vuebase/expand2.html" class="sidebar-link">将 UI 界面交给第三方库</a></li><li><a href="/vuebase/expand3.html" class="sidebar-link">尝试使用外部数据</a></li><li><a href="/vuebase/guide1.html" class="sidebar-link">从编码技巧与规范开始</a></li><li><a href="/vuebase/guide2.html" class="sidebar-link">编写可复用性模块</a></li><li><a href="/vuebase/guide3.html" class="sidebar-link">合理划分容器组件与展示组件</a></li><li><a href="/vuebase/guide4.html" class="sidebar-link">数据驱动与拼图游戏</a></li><li><a href="/vuebase/guide5.html" class="sidebar-link">Vue API 盲点解析</a></li><li><a href="/vuebase/summary.html" class="sidebar-link">总结</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="项目整合与优化"><a href="#项目整合与优化" class="header-anchor">#</a> 项目整合与优化</h1> <p>前几小节，我们讲述了 Vue 项目构建的整体流程，从无到有的实现了单页和多页应用的功能配置，但在实现的过程中不乏一些可以整合的功能点及可行性的优化方案，就像大楼造完需要进行最后的项目验收改进一样，有待我们进一步的去完善。</p> <h2 id="使用-alias-简化路径"><a href="#使用-alias-简化路径" class="header-anchor">#</a> 使用 alias 简化路径</h2> <p>使用 webpack 构建过 Vue 项目的同学应该知道 <code>alias</code> 的作用，我们可以使用它将复杂的文件路径定义成一个变量来访问。在不使用 alias 的项目中，我们引入文件的时候通常会去计算被引入文件对于引入它的文件的相对路径，比如像这样：</p> <div class="language- extra-class"><pre class="language-text"><code>import HelloWorld from '../../../../HelloWorld.vue'
+
+</code></pre></div><p>一旦相对层次结构较深，我们就很难去定位所引入文件的具体位置，其实这并不是我们应该操心的地方，完全可以交给 webpack 来进行处理。在原生的 webpack 配置中我们可以定义 alias 来解决这一问题：</p> <div class="language- extra-class"><pre class="language-text"><code>const path = require('path')
+
+const resolve = dir =&gt; {
+    return path.join(__dirname, dir)
+}
+
+module.exports = {
+    ...
+    
+    resolve: {
+        alias: {
+            '@': resolve('src'), // 定义 src 目录变量
+            _lib: resolve('src/common'), // 定义 common 目录变量,
+            _com: resolve('src/components'), // 定义 components 目录变量,
+            _img: resolve('src/images'), // 定义 images 目录变量,
+            _ser: resolve('src/services'), // 定义 services 目录变量,
+        }
+    },
+    
+    ...
+}
+
+</code></pre></div><p>上方我们在 webpack resolve（解析）对象下配置 alias 的值，将常用的一些路径赋值给了我们自定义的变量，这样我们便可以将第一个例子简化为：</p> <div class="language- extra-class"><pre class="language-text"><code>import HelloWorld from '_com/HelloWorld.vue'
+
+</code></pre></div><p>而在 CLI 3.x 中我们无法直接操作 webpack 的配置文件，我们需要通过 chainWebpack 来进行间接修改，代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>/* vue.config.js */
+module.exports = {
+    ...
+    
+    chainWebpack: config =&gt; {
+        config.resolve.alias
+            .set('@', resolve('src'))
+            .set('_lib', resolve('src/common'))
+            .set('_com', resolve('src/components'))
+            .set('_img', resolve('src/images'))
+            .set('_ser', resolve('src/services'))
+    },
+    
+    ...
+}
+
+</code></pre></div><p>这样我们修改 webpack alias 来简化路径的优化就实现了。但是需要注意的是对于在样式及 html 模板中引用路径的简写时，前面需要加上 <code>～</code> 符，否则路径解析会失败，如：</p> <div class="language- extra-class"><pre class="language-text"><code>.img {
+    background: (~_img/home.png);
+}
+
+</code></pre></div><h2 id="整合功能模块"><a href="#整合功能模块" class="header-anchor">#</a> 整合功能模块</h2> <p>在多页应用的构建中，由于存在多个入口文件，因此会出现重复书写相同入口配置的情况，这样对于后期的修改和维护都不是特别友好，需要修改所有入口文件的相同配置，比如在 index 单页的入口中我们引用了 VConsole 及 performance 的配置，同时在 Vue 实例上还添加了 $openRouter 方法：</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import App from './index.vue'
+import router from './router'
+import store from '@/store/'
+import { Navigator } from '../../common'
+
+// 如果是非线上环境，不加载 VConsole
+if (process.env.NODE_ENV !== 'production') {
+    var VConsole = require('vconsole/dist/vconsole.min.js');
+    var vConsole = new VConsole();
+
+    Vue.config.performance = true;
+}
+
+Vue.$openRouter = Vue.prototype.$openRouter = Navigator.openRouter;
+
+new Vue({
+  router,
+  store,
+  render: h =&gt; h(App)
+}).$mount('#app')
+
+</code></pre></div><p>而在 page1 和 page2 的入口文件中也同样进行了上述配置，那我们该如何整合这些重复代码，使其能够实现一次修改多处生效的功能呢？最简单的方法便是封装成一个共用方法来进行调用，这里我们可以在 common 文件夹下新建 entryConfig 文件夹用于放置入口文件中公共配置的封装，封装代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>import { Navigator } from '../index'
+
+export default (Vue) =&gt; {
+
+    // 如果是非线上环境，不加载 VConsole
+    if (process.env.NODE_ENV !== 'production') {
+        var VConsole = require('vconsole/dist/vconsole.min.js');
+        var vConsole = new VConsole();
+
+        Vue.config.performance = true;
+    }
+
+    Vue.$openRouter = Vue.prototype.$openRouter = Navigator.openRouter;
+}
+
+</code></pre></div><p>上述代码我们向外暴露了一个函数，在调用它的入口文件中传入 Vue 实例作为参数即可实现内部功能的共用，我们可以将原本的入口文件简化为:</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import App from './index.vue'
+import router from './router'
+import store from '@/store/'
+import entryConfig from '_lib/entryConfig/'
+
+// 调用公共方法加载配置
+entryConfig(Vue)
+
+new Vue({
+  router,
+  store,
+  render: h =&gt; h(App)
+}).$mount('#app')
+
+</code></pre></div><p>这样我们便完成了入口文件配置的整合，当然你还可以给该函数传入 router 实例及自定义参数用于其他共用配置的封装。</p> <h2 id="开启-gzip-压缩"><a href="#开启-gzip-压缩" class="header-anchor">#</a> 开启 Gzip 压缩</h2> <p>在《webpack 在 CLI 3 中的应用》章节，我们介绍了 CLI 为我们内置的 webpack plugins，使用这些内置插件基本已经能够满足我们大多数项目的构建和优化，当然你仍然可以为项目添加自己想要的插件来实现一些差异化的功能，比如使用 <a href="https://www.npmjs.com/package/compression-webpack-plugin" target="_blank" rel="noopener noreferrer">compression-webpack-plugin<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 来开启 Gzip 压缩。在 vue.config.js 配置文件中，我们通过 configureWebpack 中返回一个对象来实现 plugins 的合并：</p> <div class="language- extra-class"><pre class="language-text"><code>/* vue.config.js */
+const isPro = process.env.NODE_ENV === 'production'
+
+module.exports = {
+    ...
+    
+    configureWebpack: config =&gt; {
+        if (isPro) {
+            return {
+                plugins: [
+                    new CompressionWebpackPlugin({
+                         // 目标文件名称。[path] 被替换为原始文件的路径和 [query] 查询
+                        asset: '[path].gz[query]',
+                        // 使用 gzip 压缩
+                        algorithm: 'gzip', 
+                        // 处理与此正则相匹配的所有文件
+                        test: new RegExp(
+                            '\\.(js|css)$'
+                        ),
+                        // 只处理大于此大小的文件
+                        threshold: 10240,
+                        // 最小压缩比达到 0.8 时才会被压缩
+                        minRatio: 0.8，
+                    })
+                ]
+            }
+        }
+    }
+    ...
+}
+
+</code></pre></div><p>上方我们通过在生产环境中增加 Gzip 压缩配置实现了打包后输出增加对应的 .gz 为后缀的文件，而由于我们配置项中配置的是只压缩大小超过 10240B（10kB）的 JS 及 CSS，因此不满足条件的文件不会进行 Gzip 压缩。</p> <p>Gzip 压缩能在普通压缩的基础上再进行 50% 以上 的压缩，我们可以直接来看下控制台的输出对比图：</p> <p><img src="https://user-gold-cdn.xitu.io/2018/8/19/1654de7a38472ab8?w=621&amp;h=355&amp;f=png&amp;s=54900" alt=""></p> <p>很明显，Gzip 压缩后的文件体积得到了很大程度的减小，这对于浏览器资源加载速度的提升起到了非常有效的帮助。但是需要注意的是访问 Gzip 压缩的文件需要服务端进行相应配置，以下是 Nginx Gzip 压缩的流程：</p> <blockquote><p>Nginx 开启 Gzip 压缩配置后，其会根据配置情况对指定的类型文件进行压缩，主要针对 JS 与 CSS 。如果文件路径中存在与原文件同名（加了个 .gz），Nginx 会获取 gz 文件，如果找不到，会主动进行 Gzip 压缩。</p></blockquote> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>至此，一路走来，我们成功完成了本小册 Vue 项目构建部分的教程，从 CLI 3.x 的使用到项目内外部环境的配置，再到最后多页应用的拓展，我们循序渐进、由浅入深的讲解了 Vue 项目构建的主要知识点及详细流程，希望大家能够在此基础上举一反三，结合实际代码，将理论知识转化为实际运用，配合自己的理解，一步步实现自己的项目构建，并为构建出的项目添砖加瓦，实现质的飞跃。</p> <h2 id="思考-作业"><a href="#思考-作业" class="header-anchor">#</a> 思考 &amp; 作业</h2> <ul><li><p>除了本文中介绍的项目优化方法，还有哪些常见的优化手段？如何通过 Vue CLI 3 配置实现？</p></li> <li><p>总结并对比 Vue CLI 2.x，Vue CLI 3.x 在项目构建方面有哪些优势和不足？</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuebase/combat3.html" class="prev">
+        多页路由与模板解析
+      </a></span> <span class="next"><a href="/vuebase/expand1.html">
+        扩充你的开发工具
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.94d98655.js" defer></script><script src="/assets/js/2.981d4174.js" defer></script><script src="/assets/js/15.8454ba16.js" defer></script>
+  </body>
+</html>
